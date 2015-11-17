@@ -1,6 +1,9 @@
 import csv
 
 with open('data/category.csv', 'rb') as csvfile:
-    reader = csv.reader(csvfile, delimiter=',')
+    reader = csv.DictReader(csvfile)
+    categoryDict = dict()
     for row in reader:
-        print row
+        categoryDict[row['Category Name']]=row['Category Description']
+    print categoryDict
+        #print(row['Category Name'])
