@@ -1,4 +1,4 @@
-BrandSizeCatID, BrandID, CategoryID, Fit, SizeUS, NumericSize, NatWaist, Hip, Inseam, Bust,Arm Length,Torso
+BrandSizeCatID,BrandID,CategoryID,Fit,SizeUS,NumericSize,NatWaist,Hip,Inseam,Bust,Arm Length,Torso
 1,1,1,regular,XXXS,000,23,33,32,,,
 2,1,1,regular,XXS,00,24,34,32,,,
 3,1,1,regular,XS,0,25,35,32,,,
