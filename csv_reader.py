@@ -1,22 +1,17 @@
 import csv
 
-# Read CSV file and make a dictionary for category names and descriptions.  
-with open('data/category.csv', 'rb') as csvfile:
-    reader = csv.DictReader(csvfile)
-    categoryDict = dict()
-    for row in reader:
-        categoryDict[row['Category ID']]=row['Category Description']
-    print categoryDict
 
-#def parse_categories(filepath):
-#    with open(filepath, 'rb') as csvfile:
-#        categories = {}
-#        reader = csv.reader(csvfile)
-#       for row in reader:
-#          for item in row[2].split(', '):
-#                categories[item.lower()] = (row[0].lower(), row[1].lower())
-#        print categories
-#        return categories
+# Read CSV file and make a dictionary.  
+def convertDict(fileName, key, value): 
+    with open(fileName, 'rb') as csvfile:
+        reader = csv.DictReader(csvfile)
+        categoryDict = dict()
+        for row in reader:
+            categoryDict[row[key]]=row[value]
+        print categoryDict
+        return;
 
-#parse_categories('data/category.csv')
+category = convertDict("data/category.csv", 'Category ID', 'Category Description')
+brand = convertDict("data/brand.csv", "BrandID", "Brand Name") 
+
 
