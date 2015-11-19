@@ -1,7 +1,9 @@
 class BrandSize():
   def __init__(self, dict):
     self.brand_id = dict['BrandID']
+    self.brand_name = dict['BrandName']
     self.category_id = dict['CategoryID']
+    self.category_name = dict['CategoryName']
     self.fit = assign(dict, 'Fit')
     self.size_us = assign(dict, 'sizeUS')
     self.size_num = assign(dict, 'NumericSize')
@@ -12,5 +14,5 @@ class BrandSize():
     self.arm_length = assign(dict, 'Arm Length')
     self.torso = assign(dict, 'Torso')
 
-  def assign(dict, key):
-    return dict[key] if key in dict.keys() else -1
+def assign(dict, key):
+  return dict[key] if key in dict.keys() else -1
