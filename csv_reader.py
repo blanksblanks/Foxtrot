@@ -8,7 +8,7 @@ def convertDict(fileName, key, value):
         categoryDict = dict()
         for row in reader:
             categoryDict[row[key]]=row[value]
-        print categoryDict
+#        print categoryDict
         return categoryDict
 
 category = convertDict("data/category.csv", 'Category ID', 'Category Description')
@@ -25,5 +25,5 @@ with open('data/brandsizes.csv', 'rb') as csvfile:
         count += 1
         item['BrandName'] = brand[(item['BrandID'])]
         item['CategoryName'] = category[(row['CategoryID'])]
-        print item
-        print BrandSize(item)
+#        print item
+#        print BrandSize(item)
